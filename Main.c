@@ -73,5 +73,54 @@ int main(int banyakArgumen, char *argumen[])
     {
         printf("Anda gagal login!");
     }
+    char serangga[20];
+    char duri[20];
+    char air[20];
+    char mamalia[20];
+    int benar = 0;
+
+    // Pertanyaan 1
+    printf("Apa yang menghasilkan madu? ");
+    scanf("%s",serangga);
+    if (strcmp(serangga, "lebah") == 0) {
+        printf("Jawaban Anda benar!\n");
+        benar++;
+    } else {
+        printf("Jawaban Anda salah.\n");
+    }
+
+    // Pertanyaan 2
+    printf("Hewan yang memiliki duri seperti jarum di tubuhnya? ");
+    scanf("%s", duri);
+    if (strcmp(duri, "kalajengking") == 0) {
+        printf("Jawaban Anda benar!\n");
+        benar++;
+    } else {
+        printf("Jawaban Anda salah.\n");
+    }
+
+    // Pertanyaan 3
+    printf("Hewan besar yang sering berada di dalam air? ");
+    scanf("%s", air);
+    if (strcmp(air, "gajah") == 0 || strcmp(air, "badak") == 0 || strcmp(air, "kuda nil") == 0) {
+        printf("Jawaban Anda benar!\n");
+        benar++;
+    } else {
+        printf("Jawaban Anda salah.\n");
+    }
+
+    // Pertanyaan 4
+    printf("Mamalia terbesar di dunia? ");
+    scanf("%s", mamalia);
+    if (strcmp(mamalia, "paus biru") == 0) {
+        printf("Jawaban Anda benar!\n");
+        benar++;
+    } else {
+        printf("Jawaban Anda salah.\n");
+    }
+
+    // Hasil
+    printf("Anda berhasil menjawab %d dari 4 pertanyaan.\n", benar);
+    
     return 0;
 }
