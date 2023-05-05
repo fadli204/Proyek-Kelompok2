@@ -5,7 +5,7 @@
 
 int main(int banyakArgumen, char *argumen[])
 {
-    if (banyakArgumen == 1))
+    if (banyakArgumen == 1)
     {
         // Menampilkan petunjuk cara penggunaan program
         printf("\nCara Penggunaan: \n");
@@ -24,7 +24,8 @@ int main(int banyakArgumen, char *argumen[])
         printf("\nMasukkan username dan password Anda: ");
         
         // Membaca input username dan password
-        char namepass[50};
+        char namepass[50];
+        
         scanf("%[^\n]s", namepass);
         getchar();
         
@@ -55,8 +56,9 @@ int main(int banyakArgumen, char *argumen[])
         strcpy(password, string[1]);
         
         // Menampilkan username dan password yang telah diinput
-        printf("Username: %s\nPassword: %s\n", username, password);
-        printf("Registrasi berhasil!.\n\n");
+        printf("Username: %s\nPassword: %s\n\n", username, password);
+        printf("Registrasi berhasil!\n\n");
+        printf("Untuk Login: ./Program username(spasi)password\n\n");
         return EXIT_SUCCESS;
     }
     else if (banyakArgumen == 3)
@@ -96,7 +98,7 @@ int main(int banyakArgumen, char *argumen[])
         // Mengecek apakah usernameInput dan passwordInput sama dengan dalam file
         if ((strcmp(usernameInput, username) == 0) && (strcmp(passwordInput, password) == 0))
         {
-            printf("Selamat, Anda berhasil login!");
+            printf("\nSelamat, Anda berhasil login!\n");
         }
         else
         {
@@ -107,8 +109,8 @@ int main(int banyakArgumen, char *argumen[])
             return EXIT_FAILURE;
         }
         // Menutup file Login.bin    
-        fclose(ptr)
-    {
+        fclose(fptr);
+    }
     else
     {
         printf("Argumen yang dimasukkan tidak valid. Silakan cek kembali cara penggunaan program.\n");
@@ -117,16 +119,20 @@ int main(int banyakArgumen, char *argumen[])
         
     int benar = 0;
     char jawaban;
-
+    
+    printf("\n+==========================================+");
+    printf("\n|     SELAMAT DATANG DI PERMAINAN KAMI     |");
+    printf("\n+==========================================+");
     // Pertanyaan 1
-    printf("Apa yang menghasilkan madu?\n");
+    printf("\n\nPERTANYAAN PERTAMA");
+    printf("\nHewan apa yang menghasilkan madu?\n");
     printf("A. Lebah\n");
     printf("B. Semut\n");
     printf("C. Capung\n");
     printf("D. Lalat\n");
     
-    printf("masukkan jawaban :" );
-    scanf("%d", &jawaban);
+    printf("Masukkan jawaban: " );
+    scanf("%s", &jawaban);
 
     if (jawaban == 'A' || jawaban == 'a') {
         printf("Jawaban Anda benar!\n");
@@ -136,14 +142,15 @@ int main(int banyakArgumen, char *argumen[])
     }
 
     // Pertanyaan 2
-    printf("Hewan yang memiliki duri seperti jarum di tubuhnya?\n");
+    printf("\vPERTANYAAN KEDUA\n");
+    printf("Apakah hewan yang memiliki duri seperti jarum di tubuhnya?\n");
     printf("A. Kalajengking\n");
     printf("B. Kadal\n");
     printf("C. Iguana\n");
     printf("D. Buaya\n");
     
-    printf("masukkan jawaban :" );
-    scanf(" %c", &jawaban);
+    printf("Masukkan jawaban: " );
+    scanf("%s", &jawaban);
 
     if (jawaban == 'A' || jawaban == 'a') {
         printf("Jawaban Anda benar!\n");
@@ -153,31 +160,34 @@ int main(int banyakArgumen, char *argumen[])
     }
 
     // Pertanyaan 3
+    printf("\vPERTANYAAN KETIGA\n");
     printf("Hewan besar yang sering berada di dalam air?\n");
     printf("A. Gajah\n");
     printf("B. Badak\n");
     printf("C. Kuda Nil\n");
     printf("D. Jerapah\n");
     
-    printf("masukkan jawaban :" );        
-    scanf(" %c", &jawaban);
+    printf("Masukkan jawaban: ");        
+    scanf("%s", &jawaban);
 
     if (jawaban == 'C' || jawaban == 'c') {
         printf("Jawaban Anda benar!\n");
         benar++;
     } else {
         printf("Jawaban Anda salah.\n");
+        exit(1);
     }
 
     // Pertanyaan 4
-    printf("Mamalia terbesar di dunia?\n");
+    printf("\vPERTANYAAN KEEMPAT\n");
+    printf("Mamalia terbesar di dunia adalah?\n");
     printf("A. Jerapah\n");
     printf("B. Singa\n");
     printf("C. Harimau\n");
     printf("D. Paus Biru\n");
     
-    printf("masukkan jawaban :" );        
-    scanf(" %c", &jawaban);
+    printf("Masukkan jawaban: " );        
+    scanf("%s", &jawaban);
 
     if (jawaban == 'D' || jawaban == 'd') {
         printf("Jawaban Anda benar!\n");
@@ -187,14 +197,15 @@ int main(int banyakArgumen, char *argumen[])
     }
 
     // Pertanyaan 5
+    printf("\vPERTANYAAN KELIMA\n");
     printf("Apa warna buah apel?\n");
     printf("A. Kuning\n");
     printf("B. Hijau\n");
     printf("C. Merah\n");
     printf("D. Biru\n");
     
-    printf("masukkan jawaban :" );        
-    scanf(" %c", &jawaban);
+    printf("Masukkan jawaban: " );        
+    scanf("%s", &jawaban);
 
     if (jawaban == 'C' || jawaban == 'c') {
         printf("Jawaban Anda benar!\n");
@@ -204,14 +215,15 @@ int main(int banyakArgumen, char *argumen[])
     }
 
     // Pertanyaan 6
-    printf("Hewan tercepat di darat?\n");
+    printf("\vPERTANYAAN KEENAM\n");
+    printf("Hewan apakah yang tercepat di darat?\n");
     printf("A. Kelinci\n");
     printf("B. Kuda\n");
     printf("C. Cheetah\n");
     printf("D. Jerapah\n");
             
-    printf("masukkan jawaban :" );
-    scanf(" %c", &jawaban);
+    printf("Masukkan jawaban: " );
+    scanf("%s", &jawaban);
 
     if (jawaban == 'C' || jawaban == 'c') {
         printf("Jawaban Anda benar!\n");
@@ -221,13 +233,14 @@ int main(int banyakArgumen, char *argumen[])
     }
 
     // Pertanyaan 7
+    printf("\vPERTANYAAN KETUJUH\n");
     printf("Siapakah presiden ketujuh Indonesia?\n");
     printf("A. Susilo Bambang Yudhoyono\n");
     printf("B. Joko Widodo\n");
     printf("C. Megawati Soekarnoputri\n");
-     printf("C. B. J. Habibi\n");
-    printf("masukkan jawaban:");
-    scanf(" %c", &jawaban);
+    printf("D. B. J. Habibi\n");
+    printf("Masukkan jawaban: ");
+    scanf("%s", &jawaban);
     if (jawaban == 'B' || jawaban == 'b') {
         printf("Jawaban Anda benar!\n");
         benar++;
@@ -236,13 +249,14 @@ int main(int banyakArgumen, char *argumen[])
     }
 
     // Pertanyaan 8
+    printf("\vPERTANYAAN KEDELAPAN\n");
     printf("Siapa ketua umum PDIP?\n");
     printf("A. Susilo Bambang Yudhoyono\n");
     printf("B. Joko Widodo\n");
     printf("C. Megawati Soekarnoputri\n");
     printf("D. Puan Maharani\n");
-    printf("masukkan jawaban: ");
-    scanf(" %c", &jawaban);
+    printf("Masukkan jawaban: ");
+    scanf("%s", &jawaban);
     if (jawaban == 'C' || jawaban == 'c') {
         printf("Jawaban Anda benar!\n");
         benar++;
@@ -251,13 +265,14 @@ int main(int banyakArgumen, char *argumen[])
     }
 
     // Pertanyaan 9
-    printf("Samudera Pasai adalah kerajaan Islam pertama, dimana lokasinya??\n");
+    printf("\vPERTANYAAN KESEMBILAN\n");
+    printf("Samudera Pasai adalah kerajaan Islam pertama, di manakah lokasinya??\n");
     printf("A. Aceh\n");
     printf("B. Jawa Timur\n");
     printf("C. Sumatera Selatan\n");
-    printf('D. Sumatera Utara\n");
-    printf("masukkan jawaban: ");
-    scanf(" %c", &jawaban);
+    printf("D. Sumatera Utara\n");
+    printf("Masukkan jawaban: ");
+    scanf("%s", &jawaban);
     if (jawaban == 'A' || jawaban == 'a') {
         printf("Jawaban Anda benar!\n");
         benar++;
@@ -266,22 +281,24 @@ int main(int banyakArgumen, char *argumen[])
     }
 
     // Pertanyaan 10
-    printf("Apa nama tumbuhan yang dapat hidup dimana saja?\n");
+    printf("\vPERTANYAAN TERAKHIR\n");
+    printf("Tumbuhan apa yang dapat hidup di mana saja?\n");
     printf("A. Kelapa\n");
     printf("B. Anggrek\n");
     printf("C. Mangga\n");
     printf("D. Rambutan\n");
-    printf("masukkan jawaban: ");
-    scanf(" %c", &jawaban);
+    printf("Masukkan jawaban: ");
+    scanf("%s", &jawaban);
     if (jawaban == 'A' || jawaban == 'a') {
-        printf("Jawaban Anda benar!\n");
+        printf("\nJawaban Anda benar!\n\n");
         benar++;
     } else {
         printf("Jawaban Anda salah.\n");
     }
 
     // Hasil
-    printf("Anda berhasil menjawab %d dari 10 pertanyaan.\n", benar);
+    printf("SELAMAT!");
+    printf("\nAnda berhasil menjawab %d dari 10 pertanyaan.\n", benar);
     
     return 0;
 }
