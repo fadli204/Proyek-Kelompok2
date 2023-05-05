@@ -77,12 +77,31 @@ int main(int banyakArgumen, char *argumen[])
     char duri[20];
     char air[20];
     char mamalia[20];
+    char buah[20];
+    char hewan[20];
+    char tumbuhan[20];
     int benar = 0;
 
     // Pertanyaan 1
     printf("Apa yang menghasilkan madu? ");
     scanf("%s",serangga);
     if (strcmp(serangga, "lebah") == 0) {
+        printf("Jawaban Anda benar!\n");
+        benar++;
+    } 
+    else {
+        printf("Jawaban Anda salah.\n");
+    }
+
+    // Pertanyaan 1
+    printf("Apa yang menghasilkan madu?\n");
+    printf("A. Lebah\n");
+    printf("B. Semut\n");
+    printf("C. Capung\n");
+    printf("D. Lalat\n");
+    scanf("%d", &jawaban);
+
+    if (jawaban == 'A' || jawaban == 'a') {
         printf("Jawaban Anda benar!\n");
         benar++;
     } else {
@@ -95,7 +114,8 @@ int main(int banyakArgumen, char *argumen[])
     if (strcmp(duri, "kalajengking") == 0) {
         printf("Jawaban Anda benar!\n");
         benar++;
-    } else {
+    } 
+    else {
         printf("Jawaban Anda salah.\n");
     }
 
@@ -105,7 +125,8 @@ int main(int banyakArgumen, char *argumen[])
     if (strcmp(air, "gajah") == 0 || strcmp(air, "badak") == 0 || strcmp(air, "kuda nil") == 0) {
         printf("Jawaban Anda benar!\n");
         benar++;
-    } else {
+    } 
+    else {
         printf("Jawaban Anda salah.\n");
     }
 
@@ -115,9 +136,46 @@ int main(int banyakArgumen, char *argumen[])
     if (strcmp(mamalia, "paus biru") == 0) {
         printf("Jawaban Anda benar!\n");
         benar++;
+    } 
+    else {
+        printf("Jawaban Anda salah.\n");
+    }
+    
+    // Pertanyaan 5
+    printf("Apa warna buah apel? ");
+    scanf("%s", buah);
+    if (strcmp(buah, "merah") == 0) {
+        printf("Jawaban Anda benar!\n");
+        benar++;
+    } 
+    else {
+        printf("Jawaban Anda salah.\n");
+    }
+    
+    //Pertanyaan 6
+    printf("Hewan tercepat di darat? ");
+    scanf("%s", hewan);
+    if (strcmp(hewan, "kelinci") == 0 || strcmp(hewan, "kuda") == 0 || strcmp(hewan, "sepatu roda") == 0) {
+        printf("Jawaban Anda salah. Hewan yang dicari lebih cepat dari itu!\n");
+    } 
+    else if (strcmp(hewan, "cheetah") == 0) {
+        printf("Jawaban Anda benar!\n");
+        benar++;
+    } 
+    else {
+    printf("Jawaban Anda salah.\n");
+    }
+    
+    // Pertanyaan 7
+    printf("Apa nama tumbuhan yang dapat hidup dimana saja? ");
+    scanf("%s", tumbuhan);
+    if (strcmp(tumbuhan, "kelapa") == 0) {
+        printf("Jawaban Anda benar!\n");
+        benar++;
     } else {
         printf("Jawaban Anda salah.\n");
     }
+
 
     // Hasil
     printf("Anda berhasil menjawab %d dari 4 pertanyaan.\n", benar);
