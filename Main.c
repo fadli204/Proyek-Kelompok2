@@ -80,6 +80,9 @@ int main(int banyakArgumen, char *argumen[])
     char buah[20];
     char hewan[20];
     char tumbuhan[20];
+    char presiden[20];
+    char pdip[20];
+    char lokasi[20];
     int benar = 0;
 
     // Pertanyaan 1
@@ -170,6 +173,36 @@ int main(int banyakArgumen, char *argumen[])
     printf("Apa nama tumbuhan yang dapat hidup dimana saja? ");
     scanf("%s", tumbuhan);
     if (strcmp(tumbuhan, "kelapa") == 0) {
+        printf("Jawaban Anda benar!\n");
+        benar++;
+    } else {
+        printf("Jawaban Anda salah.\n");
+    }
+    
+    // Pertanyaan 8
+    printf("Siapakah presiden ketujuh ketujuh Indonesia?");
+    scanf("%s", presiden);
+    if (strcmp(presiden, "jokowi") == 0) {
+        printf("Jawaban Anda benar!\n");
+        benar++;
+    } else {
+        printf("Jawaban Anda salah.\n");
+    }
+
+    // Pertanyaan 9
+    printf("Siapa ketua umum PDIP?");
+    scanf("%s", pdip);
+    if (strcmp(pdip, "megawati") == 0) {
+        printf("Jawaban Anda benar!\n");
+        benar++;
+    } else {
+        printf("Jawaban Anda salah.\n");
+    }
+
+     // Pertanyaan 10
+    printf("Samudera Pasai adalah kerajaan Islam pertama, dimana lokasinya??");
+    scanf("%s", lokasi);
+    if (strcmp(lokasi, "aceh") == 0) {
         printf("Jawaban Anda benar!\n");
         benar++;
     } else {
