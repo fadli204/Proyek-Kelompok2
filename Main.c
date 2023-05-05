@@ -115,28 +115,8 @@ int main(int banyakArgumen, char *argumen[])
         return EXIT_FAILURE;
     }
         
-    char serangga[20];
-    char duri[20];
-    char air[20];
-    char mamalia[20];
-    char buah[20];
-    char hewan[20];
-    char tumbuhan[20];
-    char presiden[20];
-    char pdip[20];
-    char lokasi[20];
     int benar = 0;
-
-    // Pertanyaan 1
-    printf("Apa yang menghasilkan madu? ");
-    scanf("%s",serangga);
-    if (strcmp(serangga, "lebah") == 0) {
-        printf("Jawaban Anda benar!\n");
-        benar++;
-    } 
-    else {
-        printf("Jawaban Anda salah.\n");
-    }
+    char jawaban;
 
     // Pertanyaan 1
     printf("Apa yang menghasilkan madu?\n");
@@ -144,6 +124,8 @@ int main(int banyakArgumen, char *argumen[])
     printf("B. Semut\n");
     printf("C. Capung\n");
     printf("D. Lalat\n");
+    
+    printf("masukkan jawaban :" );
     scanf("%d", &jawaban);
 
     if (jawaban == 'A' || jawaban == 'a') {
@@ -154,77 +136,114 @@ int main(int banyakArgumen, char *argumen[])
     }
 
     // Pertanyaan 2
-    printf("Hewan yang memiliki duri seperti jarum di tubuhnya? ");
-    scanf("%s", duri);
-    if (strcmp(duri, "kalajengking") == 0) {
-        printf("Jawaban Anda benar!\n");
-        benar++;
-    } 
-    else {
-        printf("Jawaban Anda salah.\n");
-    }
+    printf("Hewan yang memiliki duri seperti jarum di tubuhnya?\n");
+    printf("A. Kalajengking\n");
+    printf("B. Kadal\n");
+    printf("C. Iguana\n");
+    printf("D. Buaya\n");
+    
+    printf("masukkan jawaban :" );
+    scanf(" %c", &jawaban);
 
-    // Pertanyaan 3
-    printf("Hewan besar yang sering berada di dalam air? ");
-    scanf("%s", air);
-    if (strcmp(air, "gajah") == 0 || strcmp(air, "badak") == 0 || strcmp(air, "kuda nil") == 0) {
-        printf("Jawaban Anda benar!\n");
-        benar++;
-    } 
-    else {
-        printf("Jawaban Anda salah.\n");
-    }
-
-    // Pertanyaan 4
-    printf("Mamalia terbesar di dunia? ");
-    scanf("%s", mamalia);
-    if (strcmp(mamalia, "paus biru") == 0) {
-        printf("Jawaban Anda benar!\n");
-        benar++;
-    } 
-    else {
-        printf("Jawaban Anda salah.\n");
-    }
-    
-    // Pertanyaan 5
-    printf("Apa warna buah apel? ");
-    scanf("%s", buah);
-    if (strcmp(buah, "merah") == 0) {
-        printf("Jawaban Anda benar!\n");
-        benar++;
-    } 
-    else {
-        printf("Jawaban Anda salah.\n");
-    }
-    
-    //Pertanyaan 6
-    printf("Hewan tercepat di darat? ");
-    scanf("%s", hewan);
-    if (strcmp(hewan, "kelinci") == 0 || strcmp(hewan, "kuda") == 0 || strcmp(hewan, "sepatu roda") == 0) {
-        printf("Jawaban Anda salah. Hewan yang dicari lebih cepat dari itu!\n");
-    } 
-    else if (strcmp(hewan, "cheetah") == 0) {
-        printf("Jawaban Anda benar!\n");
-        benar++;
-    } 
-    else {
-    printf("Jawaban Anda salah.\n");
-    }
-    
-    // Pertanyaan 7
-    printf("Apa nama tumbuhan yang dapat hidup dimana saja? ");
-    scanf("%s", tumbuhan);
-    if (strcmp(tumbuhan, "kelapa") == 0) {
+    if (jawaban == 'A' || jawaban == 'a') {
         printf("Jawaban Anda benar!\n");
         benar++;
     } else {
         printf("Jawaban Anda salah.\n");
     }
+
+    // Pertanyaan 3
+    printf("Hewan besar yang sering berada di dalam air?\n");
+    printf("A. Gajah\n");
+    printf("B. Badak\n");
+    printf("C. Kuda Nil\n");
+    printf("D. Jerapah\n");
     
+    printf("masukkan jawaban :" );        
+    scanf(" %c", &jawaban);
+
+    if (jawaban == 'C' || jawaban == 'c') {
+        printf("Jawaban Anda benar!\n");
+        benar++;
+    } else {
+        printf("Jawaban Anda salah.\n");
+    }
+
+    // Pertanyaan 4
+    printf("Mamalia terbesar di dunia?\n");
+    printf("A. Jerapah\n");
+    printf("B. Singa\n");
+    printf("C. Harimau\n");
+    printf("D. Paus Biru\n");
+    
+    printf("masukkan jawaban :" );        
+    scanf(" %c", &jawaban);
+
+    if (jawaban == 'D' || jawaban == 'd') {
+        printf("Jawaban Anda benar!\n");
+        benar++;
+    } else {
+        printf("Jawaban Anda salah.\n");
+    }
+
+    // Pertanyaan 5
+    printf("Apa warna buah apel?\n");
+    printf("A. Kuning\n");
+    printf("B. Hijau\n");
+    printf("C. Merah\n");
+    printf("D. Biru\n");
+    
+    printf("masukkan jawaban :" );        
+    scanf(" %c", &jawaban);
+
+    if (jawaban == 'C' || jawaban == 'c') {
+        printf("Jawaban Anda benar!\n");
+        benar++;
+    } else {
+        printf("Jawaban Anda salah.\n");
+    }
+
+    // Pertanyaan 6
+    printf("Hewan tercepat di darat?\n");
+    printf("A. Kelinci\n");
+    printf("B. Kuda\n");
+    printf("C. Cheetah\n");
+    printf("D. Jerapah\n");
+            
+    printf("masukkan jawaban :" );
+    scanf(" %c", &jawaban);
+
+    if (jawaban == 'C' || jawaban == 'c') {
+        printf("Jawaban Anda benar!\n");
+        benar++;
+    } else {
+        printf("Jawaban Anda salah.\n");
+    }
+
+    // Pertanyaan 7
+    printf("Siapakah presiden ketujuh Indonesia?\n");
+    printf("A. Susilo Bambang Yudhoyono\n");
+    printf("B. Joko Widodo\n");
+    printf("C. Megawati Soekarnoputri\n");
+     printf("C. B. J. Habibi\n");
+    printf("masukkan jawaban:");
+    scanf(" %c", &jawaban);
+    if (jawaban == 'B' || jawaban == 'b') {
+        printf("Jawaban Anda benar!\n");
+        benar++;
+    } else {
+        printf("Jawaban Anda salah.\n");
+    }
+
     // Pertanyaan 8
-    printf("Siapakah presiden ketujuh ketujuh Indonesia?");
-    scanf("%s", presiden);
-    if (strcmp(presiden, "jokowi") == 0) {
+    printf("Siapa ketua umum PDIP?\n");
+    printf("A. Susilo Bambang Yudhoyono\n");
+    printf("B. Joko Widodo\n");
+    printf("C. Megawati Soekarnoputri\n");
+    printf("D. Puan Maharani\n");
+    printf("masukkan jawaban: ");
+    scanf(" %c", &jawaban);
+    if (jawaban == 'C' || jawaban == 'c') {
         printf("Jawaban Anda benar!\n");
         benar++;
     } else {
@@ -232,28 +251,37 @@ int main(int banyakArgumen, char *argumen[])
     }
 
     // Pertanyaan 9
-    printf("Siapa ketua umum PDIP?");
-    scanf("%s", pdip);
-    if (strcmp(pdip, "megawati") == 0) {
+    printf("Samudera Pasai adalah kerajaan Islam pertama, dimana lokasinya??\n");
+    printf("A. Aceh\n");
+    printf("B. Jawa Timur\n");
+    printf("C. Sumatera Selatan\n");
+    printf('D. Sumatera Utara\n");
+    printf("masukkan jawaban: ");
+    scanf(" %c", &jawaban);
+    if (jawaban == 'A' || jawaban == 'a') {
         printf("Jawaban Anda benar!\n");
         benar++;
     } else {
         printf("Jawaban Anda salah.\n");
     }
 
-     // Pertanyaan 10
-    printf("Samudera Pasai adalah kerajaan Islam pertama, dimana lokasinya??");
-    scanf("%s", lokasi);
-    if (strcmp(lokasi, "aceh") == 0) {
+    // Pertanyaan 10
+    printf("Apa nama tumbuhan yang dapat hidup dimana saja?\n");
+    printf("A. Kelapa\n");
+    printf("B. Anggrek\n");
+    printf("C. Mangga\n");
+    printf("D. Rambutan\n");
+    printf("masukkan jawaban: ");
+    scanf(" %c", &jawaban);
+    if (jawaban == 'A' || jawaban == 'a') {
         printf("Jawaban Anda benar!\n");
         benar++;
     } else {
         printf("Jawaban Anda salah.\n");
     }
-
 
     // Hasil
-    printf("Anda berhasil menjawab %d dari 4 pertanyaan.\n", benar);
+    printf("Anda berhasil menjawab %d dari 10 pertanyaan.\n", benar);
     
     return 0;
 }
