@@ -7,7 +7,7 @@ Ketua:
 
 Anggota:
 
-	-Cut Sula Fathia Rahma (2208107010048)
+	-Cut Sula Fhatia Rahma (2208107010048)
 
 	-Muhammad Arief Munandar (2208107010036)
 
