@@ -128,7 +128,7 @@ int main(int banyakArgumen, char *argumen[])
         return EXIT_FAILURE;
     }
         
-    int benar = 0;
+    int poin = 0;
     char jawaban;
     
     printf("\n+==========================================+");
@@ -147,7 +147,7 @@ int main(int banyakArgumen, char *argumen[])
 
     if (jawaban == 'A' || jawaban == 'a') {
         printf("Jawaban Anda benar!\n");
-        benar++;
+        poin++;
     } else {
         printf("Jawaban Anda salah.\n");
     }
@@ -165,7 +165,7 @@ int main(int banyakArgumen, char *argumen[])
 
     if (jawaban == 'A' || jawaban == 'a') {
         printf("Jawaban Anda benar!\n");
-        benar++;
+        poin++;
     } else {
         printf("Jawaban Anda salah.\n");
     }
@@ -183,7 +183,7 @@ int main(int banyakArgumen, char *argumen[])
 
     if (jawaban == 'C' || jawaban == 'c') {
         printf("Jawaban Anda benar!\n");
-        benar++;
+        poin++;
     } else {
         printf("Jawaban Anda salah.\n");
         exit(1);
@@ -202,7 +202,7 @@ int main(int banyakArgumen, char *argumen[])
 
     if (jawaban == 'D' || jawaban == 'd') {
         printf("Jawaban Anda benar!\n");
-        benar++;
+        poin++;
     } else {
         printf("Jawaban Anda salah.\n");
     }
@@ -220,7 +220,7 @@ int main(int banyakArgumen, char *argumen[])
 
     if (jawaban == 'C' || jawaban == 'c') {
         printf("Jawaban Anda benar!\n");
-        benar++;
+        poin++;
     } else {
         printf("Jawaban Anda salah.\n");
     }
@@ -238,7 +238,7 @@ int main(int banyakArgumen, char *argumen[])
 
     if (jawaban == 'C' || jawaban == 'c') {
         printf("Jawaban Anda benar!\n");
-        benar++;
+        poin++;
     } else {
         printf("Jawaban Anda salah.\n");
     }
@@ -254,7 +254,7 @@ int main(int banyakArgumen, char *argumen[])
     scanf("%s", &jawaban);
     if (jawaban == 'B' || jawaban == 'b') {
         printf("Jawaban Anda benar!\n");
-        benar++;
+        poin++;
     } else {
         printf("Jawaban Anda salah.\n");
     }
@@ -270,7 +270,7 @@ int main(int banyakArgumen, char *argumen[])
     scanf("%s", &jawaban);
     if (jawaban == 'C' || jawaban == 'c') {
         printf("Jawaban Anda benar!\n");
-        benar++;
+        poin++;
     } else {
         printf("Jawaban Anda salah.\n");
     }
@@ -286,7 +286,7 @@ int main(int banyakArgumen, char *argumen[])
     scanf("%s", &jawaban);
     if (jawaban == 'A' || jawaban == 'a') {
         printf("Jawaban Anda benar!\n");
-        benar++;
+        poin++;
     } else {
         printf("Jawaban Anda salah.\n");
     }
@@ -302,14 +302,26 @@ int main(int banyakArgumen, char *argumen[])
     scanf("%s", &jawaban);
     if (jawaban == 'A' || jawaban == 'a') {
         printf("\nJawaban Anda benar!\n\n");
-        benar++;
+        poin++;
     } else {
         printf("Jawaban Anda salah.\n");
     }
 
     // Hasil
-    printf("SELAMAT!");
-    printf("\nAnda berhasil menjawab %d dari 10 pertanyaan.\n", benar);
+    printf("\n+------------------------------------------+");
+    printf("\n|          PERTANYAAN SUDAH BERAKHIR       |");
+    printf("\n+------------------------------------------+");
+    printf("\nAnda berhasil mendapatkan %d poin dari 10 pertanyaan.\n", poin);
+    if (poin == 10) {
+        printf("SELAMAT! Anda berhasil menjawab semua pertanyaan dengan benar!\n");
+    } else if (poin >= 7) {
+        printf("Bagus sekali! Anda berhasil menjawab %d dari 10 pertanyaan dengan benar.\n", poin);
+    } else if (poin >= 4) {
+        printf("Anda cukup pintar! Anda berhasil menjawab %d dari 10 pertanyaan dengan benar.\n", poin);
+    } else {
+        printf("Terus belajar dan semangat! Anda hanya berhasil menjawab %d dari 10 pertanyaan dengan benar.\n", poin);
+    }
+    printf("\nTerima kasih telah berpartisipasi dalam permainan ini!\n");   
     
     return 0;
 }
