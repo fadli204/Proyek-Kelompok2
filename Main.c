@@ -3,6 +3,12 @@
 #include <string.h>
 #include <conio.h>
 
+// Deklarasi struct Akun untuk menyimpan data username dan password
+typedef struct{
+    char username[30];
+    char password[20];
+} Akun;
+
 int main(int banyakArgumen, char *argumen[])
 {
     if (banyakArgumen == 1)
@@ -43,7 +49,7 @@ int main(int banyakArgumen, char *argumen[])
                       
         // Memisahkan string input menjadi username dan password
         char *string[3];
-        char username[30], password[20];
+        Akun akun;
         int ctrl = 0;
 
         string[0] = strtok(namepass, " ");
@@ -52,8 +58,8 @@ int main(int banyakArgumen, char *argumen[])
             string[ctrl] = strtok(NULL, " ");
         }
         
-        strcpy(username, string[0]);
-        strcpy(password, string[1]);
+        strcpy(akun.username, string[0]);
+        strcpy(akun.password, string[1]);
         
         // Menampilkan username dan password yang telah diinput
         printf("Username: %s\nPassword: %s\n\n", username, password);
@@ -82,7 +88,7 @@ int main(int banyakArgumen, char *argumen[])
         fread(namepass, sizeof(char), sizeof(namepass) / sizeof(char), fptr);
 
         char *string[3];
-        char username[30], password[20];
+        Akun akun;
         int ctrl = 0;
 
         string[0] = strtok(namepass, " ");
@@ -92,11 +98,11 @@ int main(int banyakArgumen, char *argumen[])
         }
     
         // Menyalin nilai string ke variabel username dan password
-        strcpy(username, string[0]);
-        strcpy(password, string[1]);
+        strcpy(akun.username, string[0]);
+        strcpy(akun.password, string[1]);
     
         // Mengecek apakah usernameInput dan passwordInput sama dengan dalam file
-        if ((strcmp(usernameInput, username) == 0) && (strcmp(passwordInput, password) == 0))
+        if ((strcmp(usernameInput, akun.username) == 0) && (strcmp(passwordInput, akun.password) == 0))
         {
             printf("\nSelamat, Anda berhasil login!\n");
         }
