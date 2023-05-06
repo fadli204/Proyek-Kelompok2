@@ -3,8 +3,15 @@
 #include <string.h>
 #include <conio.h>
 
+// Deklarasi struct Akun untuk menyimpan data username dan password
+typedef struct
+{
+    char username[30];
+    char password[20];
+} Akun;
 char namepass[50];
-void regis(){
+void regis()
+{
     printf("\n+==========================================+");
     printf("\n|               Registrasi                 |");
     printf("\n+==========================================+");
@@ -13,18 +20,11 @@ void regis(){
     printf("\nMasukkan username dan password Anda: ");
         
     // Membaca input username dan password
-      
-        
-        scanf("%[^\n]s", namepass);
-        getchar();
+           
+    scanf("%[^\n]s", namepass);
+    getchar();
 }
     
-// Deklarasi struct Akun untuk menyimpan data username dan password
-typedef struct{
-    char username[30];
-    char password[20];
-} Akun;
-
 int main(int banyakArgumen, char *argumen[])
 {
     if (banyakArgumen == 1)
