@@ -3,6 +3,22 @@
 #include <string.h>
 #include <conio.h>
 
+char namepass[50];
+void regis(){
+    printf("\n+==========================================+");
+    printf("\n|               Registrasi                 |");
+    printf("\n+==========================================+");
+    printf("\nSilahkan masukkan username dan password");
+    printf("\nFormatnya username(spasi)password");
+    printf("\nMasukkan username dan password Anda: ");
+        
+    // Membaca input username dan password
+      
+        
+        scanf("%[^\n]s", namepass);
+        getchar();
+}
+    
 // Deklarasi struct Akun untuk menyimpan data username dan password
 typedef struct{
     char username[30];
@@ -22,18 +38,7 @@ int main(int banyakArgumen, char *argumen[])
     else if (strcmp(argumen[1], "reg") == 0)
     {
         // Bagian Registrasi
-        printf("\n+==========================================+");
-        printf("\n|               Registrasi                 |");
-        printf("\n+==========================================+");
-        printf("\nSilahkan masukkan username dan password");
-        printf("\nFormatnya username(spasi)password");
-        printf("\nMasukkan username dan password Anda: ");
-        
-        // Membaca input username dan password
-        char namepass[50];
-        
-        scanf("%[^\n]s", namepass);
-        getchar();
+        regis();
         
         // Membuka file Login.bin untuk menulis username dan password
         FILE *fptr;
@@ -62,7 +67,7 @@ int main(int banyakArgumen, char *argumen[])
         strcpy(akun.password, string[1]);
         
         // Menampilkan username dan password yang telah diinput
-        printf("Username: %s\nPassword: %s\n\n", username, password);
+        printf("Username: %s\nPassword: %s\n\n",akun.username, akun.password);
         printf("Registrasi berhasil!\n\n");
         printf("Untuk Login: ./Program username(spasi)password\n\n");
         return EXIT_SUCCESS;
