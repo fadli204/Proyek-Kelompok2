@@ -88,10 +88,10 @@ int main(int banyakArgumen, char *argumen[])
         return EXIT_FAILURE;
         }
     
-        // Memisahkan string dan password yang ada di dile
-        char namepass[50];
+        // Membaca string username dan password yang ada di file
         fread(namepass, sizeof(char), sizeof(namepass) / sizeof(char), fptr);
 
+        // Memisahkan string input menjadi dua token yaitu username dan password
         char *string[3];
         Akun akun;
         int ctrl = 0;
@@ -186,7 +186,6 @@ int main(int banyakArgumen, char *argumen[])
         poin++;
     } else {
         printf("Jawaban Anda salah.\n");
-        exit(1);
     }
 
     // Pertanyaan 4
