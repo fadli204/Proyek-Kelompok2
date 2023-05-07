@@ -111,18 +111,20 @@ int main(int banyakArgumen, char *argumen[])
         }
         else
         {
-            printf("Anda gagal login!");
             printf("\nAnda gagal login!\n");
             printf("Username atau password yang anda ketik salah atau tidak terdaftar\n");
             printf("Tolong perhatikan kembali password dan username anda \nAtau silahkan registrasi terlebih dahulu untuk membuat akun\n");
             return EXIT_FAILURE;
         }
-        // Menutup file Login.bin    
+                // Menutup file Login.bin    
         fclose(fptr);
     }
     else
     {
-        printf("Argumen yang dimasukkan tidak valid. Silakan cek kembali cara penggunaan program.\n");
+        printf("Argumen yang dimasukkan tidak valid.\n");
+        printf("\nCara Penggunaan: \n");
+        printf("Untuk Registrasi: ./Program reg\n");
+        printf("Untuk Login: ./Program username(spasi)password\n\n");
         return EXIT_FAILURE;
     }
         
