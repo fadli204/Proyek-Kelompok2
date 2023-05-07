@@ -52,7 +52,7 @@ int main(int banyakArgumen, char *argumen[])
                       
         // Memisahkan string input menjadi username dan password
         char *string[3];
-        Akun akun;
+        Akun user;
         int ctrl = 0;
 
         string[0] = strtok(namepass, " ");
@@ -61,11 +61,11 @@ int main(int banyakArgumen, char *argumen[])
             string[ctrl] = strtok(NULL, " ");
         }
         
-        strcpy(akun.username, string[0]);
-        strcpy(akun.password, string[1]);
+        strcpy(user.username, string[0]);
+        strcpy(user.password, string[1]);
         
         // Menampilkan username dan password yang telah diinput
-        printf("Username: %s\nPassword: %s\n\n",akun.username, akun.password);
+        printf("Username: %s\nPassword: %s\n\n",user.username, user.password);
         printf("Registrasi berhasil!\n\n");
         printf("Untuk Login: ./Program username(spasi)password\n\n");
         return EXIT_SUCCESS;
@@ -91,7 +91,7 @@ int main(int banyakArgumen, char *argumen[])
 
         // Memisahkan string input menjadi dua token yaitu username dan password
         char *string[3];
-        Akun akun;
+        Akun user;
         int ctrl = 0;
 
         string[0] = strtok(namepass, " ");
@@ -101,11 +101,11 @@ int main(int banyakArgumen, char *argumen[])
         }
     
         // Menyalin nilai string ke variabel username dan password
-        strcpy(akun.username, string[0]);
-        strcpy(akun.password, string[1]);
+        strcpy(user.username, string[0]);
+        strcpy(user.password, string[1]);
     
         // Mengecek apakah usernameInput dan passwordInput sama dengan dalam file
-        if ((strcmp(usernameInput, akun.username) == 0) && (strcmp(passwordInput, akun.password) == 0))
+        if ((strcmp(usernameInput, user.username) == 0) && (strcmp(passwordInput, user.password) == 0))
         {
             printf("\nSelamat, Anda berhasil login!\n");
         }
