@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <conio.h>
 
 // Deklarasi struct Akun untuk menyimpan data username dan password
 typedef struct
@@ -22,7 +21,6 @@ void regis()
     // Membaca input username dan password
            
     scanf("%[^\n]s", namepass);
-    getchar();
 }
     
 int main(int banyakArgumen, char *argumen[])
